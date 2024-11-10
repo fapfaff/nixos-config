@@ -8,8 +8,9 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./../../modules/nixos/vm-configuration.nix
       inputs.home-manager.nixosModules.default
+      ./../../modules/nixos/vm-configuration.nix
+      ./../../modules/nixos/shell.nix
     ];
 
   # Bootloader.
