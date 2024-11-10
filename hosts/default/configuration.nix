@@ -100,6 +100,7 @@
     users = {
       "fp" = import ./home.nix;
     };
+    backupFileExtension = "bak";
   };
 
 
