@@ -4,6 +4,7 @@ let
   # Import submodules that specify packages and vscodeExtensions
   submodules = [
     ./dev/misc.nix
+    ./dev/git.nix
     ./dev/python.nix
   ];
 
