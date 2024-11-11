@@ -1,14 +1,32 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
-{
-  home.packages = with pkgs; [
+let
+  python = import ./dev.python.nix { inherit pkgs; };
+
+  commonExtensions = with pkgs.vscode-extensions; [
+    ms-azuretools.vscode-docker
+  ];
+
+  allVsCodeExtensions = lib.concatLists [
+    commonExtensions
+    # Import from other modules
+    python.vscodeExtensions
+  ];
+
+  commonPackages = with pkgs; [
+    docker
+
     (vscode-with-extensions.override {
-      vscodeExtensions = with vscode-extensions; [
-        bbenoist.nix
-        ms-python.python
-        ms-azuretools.vscode-docker
-        ms-vscode-remote.remote-ssh
-      ];
+      vscodeExtensions = allVsCodeExtensions;
     })
   ];
+
+  allPackages = lib.concatLists [
+    commonPackages
+    python.nixPackages
+  ];
+
+in
+{
+  home.packages = allPackages; 
 }
