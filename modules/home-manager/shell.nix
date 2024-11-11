@@ -3,6 +3,7 @@
 {
   home.packages = with pkgs; [
     eza
+    pkgs.fishPlugins.foreign-env
   ];
 
   programs.fish = {
