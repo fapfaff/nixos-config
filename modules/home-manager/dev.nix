@@ -3,28 +3,18 @@
 let
   # Import submodules that specify packages and vscodeExtensions
   submodules = [
-     ./dev/python.nix
-  ];
-
-  # Common vscodeExtensions
-  commonExtensions = with pkgs.vscode-extensions; [
-    ms-azuretools.vscode-docker
-    bbenoist.nix
-  ];
-
-  # Common packages
-  commonPackages = with pkgs; [
-    docker
+    ./dev/misc.nix
+    ./dev/python.nix
   ];
 
   importedModules = map (module: import module { inherit pkgs; }) submodules;
 
   allVsCodeExtensions = lib.concatLists (
-    [ commonExtensions ] ++ (map (module: module.vscodeExtensions) importedModules)
+    (map (module: module.vscodeExtensions) importedModules)
   );
 
   allPackages = lib.concatLists (
-    [ commonPackages ] ++ (map (module: module.packages) importedModules)
+    (map (module: module.packages) importedModules)
   );
 
 in
