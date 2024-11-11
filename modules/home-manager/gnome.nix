@@ -3,6 +3,7 @@
 rec {
   home.packages = with pkgs.gnomeExtensions; [
     pop-shell
+    dash-to-dock
   ];
 
   dconf = {
