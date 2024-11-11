@@ -9,6 +9,7 @@
     fzf
     fastfetch
     btop
+    starship
   ];
 }
 

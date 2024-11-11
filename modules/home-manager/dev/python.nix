@@ -9,7 +9,7 @@
   vscodeExtensions = with pkgs.vscode-extensions; [
         ms-python.python
 	ms-python.vscode-pylance
-	ms-python.pylint
+#	ms-python.pylint
 	ms-python.debugpy
 	ms-python.black-formatter
 	ms-python.isort
