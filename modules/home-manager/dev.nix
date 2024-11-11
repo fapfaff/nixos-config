@@ -15,10 +15,6 @@ let
   # Common packages
   commonPackages = with pkgs; [
     docker
-
-    (vscode-with-extensions.override {
-      vscodeExtensions = allVsCodeExtensions;
-    })
   ];
 
   importedModules = map (module: import module { inherit pkgs; }) submodules;
@@ -34,4 +30,11 @@ let
 in
 {
   home.packages = allPackages; 
+
+  programs.vscode = {
+    enable = true;
+    mutableExtensionsDir = true;
+
+    extensions = allVsCodeExtensions;
+  };
 }
