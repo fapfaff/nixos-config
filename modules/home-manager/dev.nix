@@ -13,10 +13,12 @@ let
   allVsCodeExtensions = lib.concatLists (
     (map (module: module.vscodeExtensions) importedModules)
   );
+  _ = builtins.trace "All VS Code Extensions:" allVsCodeExtensions;
 
   allPackages = lib.concatLists (
     (map (module: module.packages) importedModules)
   );
+
 
 in
 {
