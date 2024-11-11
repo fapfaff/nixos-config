@@ -14,6 +14,7 @@ rec {
         disable-user-extensions = false;
         enabled-extensions = map (extension: extension.extensionUuid) home.packages; 
       };
+      "org/gnome/mutter".experimental-features = [ "scale-monitor-framebuffer" ];
 
       "org/gnome/shell/extensions/pop-shell" = {
 	      smart-gaps = true; 
