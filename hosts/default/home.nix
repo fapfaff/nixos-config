@@ -5,6 +5,7 @@
     ../../modules/home-manager/general.nix
     ../../modules/home-manager/shell.nix
     ../../modules/home-manager/dev.nix
+    ../../modules/home-manager/gnome.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
