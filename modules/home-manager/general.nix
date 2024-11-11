@@ -16,6 +16,8 @@
       "nngceckbapebfimnlniiiahkandclblb"
 
       # uBlock Origin
+      # https://chromewebstore.google.com/detail/ublock/epcnnfbjfcgphgdmggkamkmgojdagdnn
+      "epcnnfbjfcgphgdmggkamkmgojdagdnn"
     ];
 
   };
