@@ -2,7 +2,7 @@
 
 {
 
-  nixPackages = with pkgs; [
+  packages = with pkgs; [
     python3
   ];
 
