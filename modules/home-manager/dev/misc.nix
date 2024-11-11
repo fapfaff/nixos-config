@@ -3,7 +3,6 @@
 {
 
   packages = with pkgs; [
-    docker
   ];
 
   vscodeExtensions = with pkgs.vscode-extensions; [

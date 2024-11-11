@@ -11,6 +11,7 @@
       inputs.home-manager.nixosModules.default
       ./../../modules/nixos/vm-configuration.nix
       ./../../modules/nixos/shell.nix
+      ./../../modules/nixos/dev.nix # docker
     ];
 
   # Bootloader.
