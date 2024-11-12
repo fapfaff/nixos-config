@@ -6,6 +6,7 @@ let
     ./dev/misc.nix
     ./dev/git.nix
     ./dev/python.nix
+    ./dev/frontend.nix
   ];
 
   importedModules = map (module: import module { inherit pkgs; }) submodules;
