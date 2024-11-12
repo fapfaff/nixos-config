@@ -12,7 +12,8 @@
       ./../../modules/nixos/vm-configuration.nix
       ./../../modules/nixos/shell.nix
       ./../../modules/nixos/dev.nix # docker
-    ];
+      ./../../modules/nixos/themes/catppuccin.nix
+  ];
 
   # Bootloader.
   boot.loader.grub.enable = true;
