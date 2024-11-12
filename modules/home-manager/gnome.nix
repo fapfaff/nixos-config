@@ -2,7 +2,7 @@
 
 rec {
   home.packages = with pkgs.gnomeExtensions; [
-    pop-shell
+    paperwm
     dash-to-panel
   ];
 
