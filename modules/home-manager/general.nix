@@ -21,5 +21,7 @@
     ];
 
   };
+
+  gtk.enable = true;
 }
 
