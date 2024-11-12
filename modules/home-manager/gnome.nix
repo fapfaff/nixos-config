@@ -17,6 +17,12 @@ in
       "org/gnome/shell" = {
         disable-user-extensions = false;
         enabled-extensions = map (extension: extension.extensionUuid) extensions; 
+        favorite-apps [
+          "org.gnome.Terminal.desktop"
+	  "org.gnome.Nautilus.desktop"
+	  "code.desktop"
+	  "chromium-browser.desktop"
+	];
       };
       "org/gnome/mutter".experimental-features = [ "scale-monitor-framebuffer" ];
 
