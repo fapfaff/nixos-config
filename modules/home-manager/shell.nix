@@ -3,8 +3,17 @@
 {
   home.packages = with pkgs; [
     eza
-    pkgs.fishPlugins.foreign-env
+    fzf
+    grc
+
+    fishPlugins.grc
+    fishPlugins.fzf-fish
+    fishPlugins.foreign-env
+    fishPlugins.done
+    fishPlugins.forgit    
+    fishPlugins.hydro
   ];
+
 
   programs.fish = {
     enable = true;
@@ -12,9 +21,6 @@
       ls = "eza";
       ll = "eza -la";
     };
-    plugins = [
-      { name = "grc"; src = pkgs.fishPlugins.grc.src; }
-    ];
     interactiveShellInit = ''
       set fish_greeting # Disable greeting
     '';
