@@ -6,6 +6,7 @@
     ../../modules/home-manager/shell.nix
     ../../modules/home-manager/dev.nix
     ../../modules/home-manager/gnome.nix
+
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -84,5 +85,7 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
   catppuccin.enable = true;
-  gtk.catppuccin.gnomeShellTheme = true;
+  gtk.enable = true;
+#  gtk.catppuccin.enable = true;
+#  gtk.catppuccin.gnomeShellTheme = true;
 }
