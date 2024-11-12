@@ -12,6 +12,12 @@
       ls = "eza";
       ll = "eza -la";
     };
+    plugins = [
+      { name = "grc"; src = pkgs.fishPlugins.grc.src; }
+    ];
+    interactiveShellInit = ''
+      set fish_greeting # Disable greeting
+    '';
   };
   programs.zoxide = {
     enable = true;
