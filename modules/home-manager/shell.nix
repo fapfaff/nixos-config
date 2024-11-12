@@ -11,7 +11,6 @@
     fishPlugins.foreign-env
     fishPlugins.done
     fishPlugins.forgit    
-    fishPlugins.hydro
   ];
 
 
@@ -25,6 +24,10 @@
       set fish_greeting # Disable greeting
     '';
   };
+  programs.starship = {
+    enable = true;
+  };
+
   programs.zoxide = {
     enable = true;
   };
