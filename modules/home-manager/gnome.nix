@@ -1,17 +1,22 @@
 { config, pkgs, lib, ... }:
-
-rec {
-  home.packages = with pkgs.gnomeExtensions; [
+let
+  extensions = with pkgs.gnomeExtensions; [
     paperwm
   ];
+in
+{
 
+  home.packages = with pkgs; [
+    gnome.gnome-terminal
+  ] ++ extensions;
+  
   dconf = {
     enable = true;
     settings = {
       "org/gnome/desktop/interface".color-scheme = "prefer-dark";
       "org/gnome/shell" = {
         disable-user-extensions = false;
-        enabled-extensions = map (extension: extension.extensionUuid) home.packages; 
+        enabled-extensions = map (extension: extension.extensionUuid) extensions; 
       };
       "org/gnome/mutter".experimental-features = [ "scale-monitor-framebuffer" ];
 
