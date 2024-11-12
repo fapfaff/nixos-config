@@ -3,7 +3,6 @@
 rec {
   home.packages = with pkgs.gnomeExtensions; [
     paperwm
-    dash-to-panel
   ];
 
   dconf = {
