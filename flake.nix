@@ -16,6 +16,11 @@
       modules = [
         hosts/default/configuration.nix
         inputs.home-manager.nixosModules.default
+	{
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.fp = import hosts/default/home.nix;
+        }
       ];
     };
   };
