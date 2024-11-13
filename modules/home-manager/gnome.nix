@@ -57,6 +57,13 @@ in
       "org/gnome/shell/extensions/clipboard-indicator" = {
         toggle-menu = ["<Super>v"];
       };
+
+      "org/gnome/shell/extensions/top-bar-organizer" = {
+        # Move media controls to the right box
+        left-box-order=["activities"  "WorkspaceMenu"  "FocusButton"  "OpenPositionButton"];
+        center-box-order=["dateMenu"];
+        right-box-order=["Media Controls"  "screenRecording"  "clipboardIndicator"  "screenSharing"  "dwellClick"  "a11y"  "keyboard"  "quickSettings"];
+      };
     };
   };
 }
