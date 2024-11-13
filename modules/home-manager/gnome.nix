@@ -40,7 +40,10 @@ in
       };
 
       "org/gnome/shell/keybindings" = {
-        toggle-message-tray = [];
+        toggle-message-tray = [ "<Super>m" ]; # Disable Super+V for clipboard indicator
+      };
+      "org/gnome/shell/extensions/paperwm/keybindings" = {
+        center-vertically = [ "" ]; # Disable Super+V for clipboard indicator
       };
 
       # Extensions
