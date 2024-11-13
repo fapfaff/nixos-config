@@ -2,6 +2,7 @@
 let
   extensions = with pkgs.gnomeExtensions; [
     paperwm
+    dash-to-dock
   ];
 in
 {
@@ -19,10 +20,10 @@ in
         enabled-extensions = map (extension: extension.extensionUuid) extensions; 
         favorite-apps = [
           "org.gnome.Terminal.desktop"
-	  "org.gnome.Nautilus.desktop"
-	  "code.desktop"
-	  "chromium-browser.desktop"
-	];
+          "org.gnome.Nautilus.desktop"
+          "code.desktop"
+          "chromium-browser.desktop"
+        ];
       };
       "org/gnome/mutter".experimental-features = [ "scale-monitor-framebuffer" ];
 
@@ -32,8 +33,14 @@ in
         xkb-options = [ "terminate:ctrl_alt_bksp" ];
       };
 
-      "org/gnome/shell/extensions/pop-shell" = {
-	      smart-gaps = true; 
+      "org/gnome/shell/extensions/dash-to-dock" = {
+        apply-custom-theme = false;
+        autohide = false;
+        custom-theme-shrink = true;
+        dash-max-icon-size = 48;
+
+        custom-background-color = true;
+        background-opacity = 0.0;
       };
     };
   };
