@@ -3,6 +3,7 @@
 {
 
   packages = with pkgs; [
+    insomnia
   ];
 
   vscodeExtensions = with pkgs.vscode-extensions; [
