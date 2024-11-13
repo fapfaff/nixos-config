@@ -3,7 +3,13 @@ let
   extensions = with pkgs.gnomeExtensions; [
     paperwm
     dash-to-dock
+    impatience
+    caffeine
+    clipboard-indicator
+    media-controls
+    top-bar-organizer
   ];
+
 in
 {
 
@@ -11,7 +17,7 @@ in
     gnome.gnome-terminal
   ] ++ extensions;
   
-  dconf = {
+  dconf = { 
     enable = true;
     settings = {
       "org/gnome/desktop/interface".color-scheme = "prefer-dark";
@@ -33,6 +39,11 @@ in
         xkb-options = [ "terminate:ctrl_alt_bksp" ];
       };
 
+      "org/gnome/shell/keybindings" = {
+        toggle-message-tray = [];
+      };
+
+      # Extensions
       "org/gnome/shell/extensions/dash-to-dock" = {
         apply-custom-theme = false;
         autohide = false;
@@ -41,6 +52,10 @@ in
 
         custom-background-color = true;
         background-opacity = 0.0;
+      };
+
+      "org/gnome/shell/extensions/clipboard-indicator" = {
+        toggle-menu = ["<Super>v"];
       };
     };
   };
