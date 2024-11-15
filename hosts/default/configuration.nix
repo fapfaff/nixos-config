@@ -2,12 +2,17 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, builtins, ... }:
+let
+  hardwareConfigPath = /etc/nixos/hardware-configuration.nix;
+  hasHardwareConfig = builtins.pathExists hardwareConfigPath;
 
+  _ = builtins.trace "Warning: hardware-config not found at ${hardwareConfigPath}" (!hardwareConfigPath); 
+in
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+      hardwareConfigPath
       inputs.home-manager.nixosModules.default
       ./../../modules/nixos/vm-configuration.nix
       ./../../modules/nixos/shell.nix
