@@ -53,6 +53,7 @@ in
         custom-theme-shrink = true;
         dash-max-icon-size = 48;
 
+        transparency-mode="FIXED";
         custom-background-color = true;
         background-opacity = 0.0;
       };
