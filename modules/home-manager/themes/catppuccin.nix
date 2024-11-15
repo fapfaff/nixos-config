@@ -2,6 +2,8 @@
 
 {
   catppuccin.enable = true;
+  catppuccin.accent = "blue";
+  
   gtk.catppuccin.enable = true;
   gtk.catppuccin.gnomeShellTheme = true;
 
