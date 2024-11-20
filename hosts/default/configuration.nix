@@ -14,17 +14,12 @@ in
     [ # Include the results of the hardware scan.
       hardwareConfigPath
       inputs.home-manager.nixosModules.default
-      ./../../modules/nixos/vm-configuration.nix
+      ./../../modules/nixos/boot.nix
       ./../../modules/nixos/shell.nix
       ./../../modules/nixos/gnome.nix
       ./../../modules/nixos/dev.nix # docker
       ./../../modules/nixos/themes/catppuccin.nix
   ];
-
-  # Bootloader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
-  boot.loader.grub.useOSProber = true;
 
   # Nix specific
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
