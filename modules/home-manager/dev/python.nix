@@ -2,11 +2,11 @@
 
 {
 
-  packages = with pkgs; [
+  home.packages = with pkgs; [
     python3
   ];
 
-  programs.home.extensions = with pkgs.vscode-extensions; [
+  programs.vscode.extensions = with pkgs.vscode-extensions; [
         ms-python.python
 	ms-python.vscode-pylance
 #	ms-python.pylint
