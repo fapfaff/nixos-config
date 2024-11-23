@@ -2,13 +2,13 @@
 
 {
 
-  packages = with pkgs; [
+  home.packages = with pkgs; [
     nodejs
     deno
     pnpm
   ];
 
-  vscodeExtensions = with pkgs.vscode-extensions; [
+  programs.vscode.extensions = with pkgs.vscode-extensions; [
     # HTML
     formulahendry.auto-close-tag
     formulahendry.auto-rename-tag

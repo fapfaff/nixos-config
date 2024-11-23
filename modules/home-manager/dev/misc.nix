@@ -2,11 +2,12 @@
 
 {
 
-  packages = with pkgs; [
+  home.packages = with pkgs; [
     insomnia
   ];
 
-  vscodeExtensions = with pkgs.vscode-extensions; [
+  programs.vscode.extensions = with pkgs.vscode-extensions; [
+    
     # Nix
     bbenoist.nix
 

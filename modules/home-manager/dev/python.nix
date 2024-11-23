@@ -6,7 +6,7 @@
     python3
   ];
 
-  vscodeExtensions = with pkgs.vscode-extensions; [
+  programs.home.extensions = with pkgs.vscode-extensions; [
         ms-python.python
 	ms-python.vscode-pylance
 #	ms-python.pylint

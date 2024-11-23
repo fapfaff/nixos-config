@@ -2,11 +2,11 @@
 
 {
 
-  packages = with pkgs; [
+  home.packages = with pkgs; [
     gh
   ];
 
-  vscodeExtensions = with pkgs.vscode-extensions; [
+  programs.vscode.extensions = with pkgs.vscode-extensions; [
     waderyan.gitblame
     donjayamanne.githistory
     codezombiech.gitignore
