@@ -1,10 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  home.packages = with pkgs; [ 
-    chromium
-  ];
-
   programs.chromium = {
     enable = true;
 
@@ -18,6 +14,11 @@
       # uBlock Origin
       # https://chromewebstore.google.com/detail/ublock/epcnnfbjfcgphgdmggkamkmgojdagdnn
       "epcnnfbjfcgphgdmggkamkmgojdagdnn"
+    ];
+
+    commandLineArgs = [
+      "--ozone-platform=wayland"
+      "--enable-features=TouchpadOverscrollHistoryNavigation"
     ];
 
   };
