@@ -39,6 +39,14 @@ in
         xkb-options = [ "terminate:ctrl_alt_bksp" ];
       };
 
+      "org/gnome/desktop/peripherals/touchpad" = {
+        click-method = "areas";
+      };
+
+      "org/gnome/desktop/peripherals/mouse" = {
+        accel-profile="flat";
+      };
+
       "org/gnome/shell/keybindings" = {
         toggle-message-tray = [ "<Super>m" ]; # Disable Super+V for clipboard indicator
       };
