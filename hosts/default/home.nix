@@ -6,6 +6,7 @@
     ../../modules/home-manager/shell.nix
     ../../modules/home-manager/dev.nix
     ../../modules/home-manager/gnome.nix
+    ../../modules/home-manager/mail.nix
     ../../modules/home-manager/themes/catppuccin.nix
   ];
 
