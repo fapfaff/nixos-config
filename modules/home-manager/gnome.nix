@@ -50,9 +50,17 @@ in
       "org/gnome/shell/keybindings" = {
         toggle-message-tray = [ "<Super>m" ]; # Disable Super+V for clipboard indicator
       };
+
+      # PaperWM
+      "org/gnome/shell/extensions/paperwm" = {
+        selection-border-size = 4;
+      };
+
       "org/gnome/shell/extensions/paperwm/keybindings" = {
         center-vertically = [ "" ]; # Disable Super+V for clipboard indicator
       };
+
+      
 
       # Extensions
       "org/gnome/shell/extensions/dash-to-dock" = {
