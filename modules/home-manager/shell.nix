@@ -20,9 +20,8 @@
       ls = "eza";
       ll = "eza -la";
     };
-    interactiveShellInit = ''
-      set fish_greeting # Disable greeting
-    '';
+    interactiveShellInit = builtins.readFile ./shell/init.fish;
+
   };
   programs.starship = {
     enable = true;
