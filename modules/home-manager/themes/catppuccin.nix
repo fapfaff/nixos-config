@@ -8,6 +8,11 @@ in
 {
   catppuccin.enable = true;
   catppuccin.accent = "blue";
+
+  catppuccin.pointerCursor = {
+    enable = true;
+    accent = "light";
+  };
   
   gtk.catppuccin.enable = true;
   gtk.catppuccin.gnomeShellTheme = true;
