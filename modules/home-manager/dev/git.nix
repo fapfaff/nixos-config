@@ -6,6 +6,12 @@
     gh
   ];
 
+  programs.git = {
+    enable = true;
+    userName = "Fabian Pfaff";
+    userEmail = "fabian-pfaff@outlook.de";
+  };
+
   programs.vscode.extensions = with pkgs.vscode-extensions; [
     waderyan.gitblame
     donjayamanne.githistory
