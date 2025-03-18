@@ -16,6 +16,7 @@ in
       inputs.home-manager.nixosModules.default
       ./../../modules/nixos/boot.nix
       ./../../modules/nixos/shell.nix
+      ./../../modules/nixos/libinput.nix
       ./../../modules/nixos/gnome.nix
       ./../../modules/nixos/dev.nix # docker
       ./../../modules/nixos/themes/catppuccin.nix
