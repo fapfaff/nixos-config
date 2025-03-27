@@ -21,7 +21,7 @@ in
   home.packages =
     with pkgs;
     [
-      gnome.gnome-terminal
+      gnome-terminal
     ]
     ++ extensions;
 
