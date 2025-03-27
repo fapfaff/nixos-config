@@ -10,9 +10,8 @@
     fishPlugins.fzf-fish
     fishPlugins.foreign-env
     fishPlugins.done
-    fishPlugins.forgit    
+    fishPlugins.forgit
   ];
-
 
   programs.fish = {
     enable = true;
@@ -37,4 +36,3 @@
     vimAlias = true;
   };
 }
-

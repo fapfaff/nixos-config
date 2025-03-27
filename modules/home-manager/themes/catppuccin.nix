@@ -18,7 +18,7 @@ in
     enable = true;
     accent = "light";
   };
-  
+
   programs.starship.catppuccin.enable = true;
 
   programs.vscode = {
@@ -28,8 +28,8 @@ in
     ];
 
     userSettings = {
-      workbench.colorTheme =  "Catppuccin Mocha";
-      workbench.iconTheme = "catppuccin-mocha";   
+      workbench.colorTheme = "Catppuccin Mocha";
+      workbench.iconTheme = "catppuccin-mocha";
     };
   };
 

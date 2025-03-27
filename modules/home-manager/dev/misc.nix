@@ -7,7 +7,7 @@
   ];
 
   programs.vscode.extensions = with pkgs.vscode-extensions; [
-    
+
     # Nix
     bbenoist.nix
     jnoortheen.nix-ide
@@ -17,7 +17,7 @@
     ms-vscode-remote.remote-containers
 
     # Github Copilot
-	  github.copilot
+    github.copilot
     github.copilot-chat
   ];
 }

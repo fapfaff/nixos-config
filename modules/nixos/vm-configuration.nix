@@ -1,4 +1,4 @@
-{ config, pkgs, ...}:
+{ config, pkgs, ... }:
 
 {
   virtualisation.virtualbox.guest = {
@@ -9,4 +9,3 @@
 
   users.users.fp.extraGroups = [ "vboxsf" ];
 }
-

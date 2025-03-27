@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   programs.thunderbird = {
@@ -24,7 +29,8 @@
           "mail.smtpserver.smtp_${id}.authMethod" = 10;
           "mail.server.server_${id}.authMethod" = 10;
         };
-      };    };
+      };
+    };
 
     Gmail = {
       address = "fabian.1.pfaff@gmail.com";
@@ -42,7 +48,7 @@
     };
 
     HM = {
-    address = "fabian.pfaff@hm.edu";
+      address = "fabian.pfaff@hm.edu";
       realName = "Fabian Pfaff";
       userName = "hm-fpfaff";
 

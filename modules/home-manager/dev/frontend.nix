@@ -12,23 +12,23 @@
     # HTML
     formulahendry.auto-close-tag
     formulahendry.auto-rename-tag
-#    bradgashler.htmltagwrap
+    #    bradgashler.htmltagwrap
 
     # Javascript
     dbaeumer.vscode-eslint
     esbenp.prettier-vscode
-#    Orta.vscode-jest
-    
+    #    Orta.vscode-jest
+
     # CSS
     bradlc.vscode-tailwindcss
-#    mrmlnc.vscode-scss
+    #    mrmlnc.vscode-scss
     # HTML
 
     # Vue
-#    Vue.volar
+    #    Vue.volar
 
     # Nuxt
-#    Nuxtr.nuxtr-vscode
-#    Nuxtr.nuxt-vscode-extentions
+    #    Nuxtr.nuxtr-vscode
+    #    Nuxtr.nuxt-vscode-extentions
   ];
 }

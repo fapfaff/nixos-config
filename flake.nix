@@ -12,25 +12,29 @@
     catppuccin.url = "github:catppuccin/nix";
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: {
-    nixosConfigurations.default = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs;};
-      modules = [
-        inputs.home-manager.nixosModules.home-manager
-	inputs.catppuccin.nixosModules.catppuccin
+  outputs =
+    { self, nixpkgs, ... }@inputs:
+    {
+      nixosConfigurations.default = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          inherit inputs;
+        };
+        modules = [
+          inputs.home-manager.nixosModules.home-manager
+          inputs.catppuccin.nixosModules.catppuccin
 
-        hosts/default/configuration.nix
-	{
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.fp = {
-	    imports = [
-	      hosts/default/home.nix
-              inputs.catppuccin.homeManagerModules.catppuccin
-	    ];
-          };
-	}
-      ];
+          hosts/default/configuration.nix
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.fp = {
+              imports = [
+                hosts/default/home.nix
+                inputs.catppuccin.homeManagerModules.catppuccin
+              ];
+            };
+          }
+        ];
+      };
     };
-  };
 }

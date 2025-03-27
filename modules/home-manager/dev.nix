@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   imports = [
@@ -9,7 +14,7 @@
   ];
 
   home.packages = with pkgs; [
-        (jetbrains.plugins.addPlugins jetbrains.idea-ultimate ["github-copilot"])   
+    (jetbrains.plugins.addPlugins jetbrains.idea-ultimate [ "github-copilot" ])
   ];
 
   programs.vscode = {

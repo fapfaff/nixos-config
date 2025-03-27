@@ -2,28 +2,39 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, builtins, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  builtins,
+  ...
+}:
 let
   hardwareConfigPath = /etc/nixos/hardware-configuration.nix;
   hasHardwareConfig = builtins.pathExists hardwareConfigPath;
 
-  _ = builtins.trace "Warning: hardware-config not found at ${hardwareConfigPath}" (!hardwareConfigPath); 
+  _ = builtins.trace "Warning: hardware-config not found at ${hardwareConfigPath}" (
+    !hardwareConfigPath
+  );
 in
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      hardwareConfigPath
-      inputs.home-manager.nixosModules.default
-      ./../../modules/nixos/boot.nix
-      ./../../modules/nixos/shell.nix
-      # ./../../modules/nixos/gnome.nix
-      ./../../modules/nixos/kde.nix
-      ./../../modules/nixos/dev.nix # docker
-      ./../../modules/nixos/themes/catppuccin.nix
+  imports = [
+    # Include the results of the hardware scan.
+    hardwareConfigPath
+    inputs.home-manager.nixosModules.default
+    ./../../modules/nixos/boot.nix
+    ./../../modules/nixos/shell.nix
+    # ./../../modules/nixos/gnome.nix
+    ./../../modules/nixos/kde.nix
+    ./../../modules/nixos/dev.nix # docker
+    ./../../modules/nixos/themes/catppuccin.nix
   ];
 
   # Nix specific
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -88,7 +99,10 @@ in
   users.users.fp = {
     isNormalUser = true;
     description = "Fabian";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     packages = with pkgs; [
       fish
     ];
@@ -96,13 +110,14 @@ in
   };
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs; };
+    extraSpecialArgs = {
+      inherit inputs;
+    };
     users = {
       "fp" = import ./home.nix;
     };
     backupFileExtension = "bak";
   };
-
 
   # Enable automatic login for the user.
   services.displayManager.autoLogin.enable = true;
@@ -128,15 +143,13 @@ in
   programs.firefox.enable = true;
   programs.git.enable = true;
 
-
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    neovim 
+    neovim
     wget
     git
     home-manager
