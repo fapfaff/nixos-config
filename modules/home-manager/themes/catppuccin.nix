@@ -19,12 +19,6 @@ in
     accent = "light";
   };
   
-  gtk.catppuccin.enable = true;
-  gtk.catppuccin.gnomeShellTheme = true;
-
-  gtk.catppuccin.icon.enable = true;
-  gtk.catppuccin.icon.accent = "lavender";
-
   programs.starship.catppuccin.enable = true;
 
   programs.vscode = {
