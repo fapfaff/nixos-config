@@ -10,6 +10,7 @@
     
     # Nix
     bbenoist.nix
+    jnoortheen.nix-ide
 
     # Virtualisation
     ms-azuretools.vscode-docker
