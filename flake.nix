@@ -9,6 +9,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
+
     catppuccin.url = "github:catppuccin/nix";
   };
 
@@ -35,6 +41,7 @@
               useUserPackages = true;
               sharedModules = [
                 inputs.catppuccin.homeManagerModules.catppuccin
+                inputs.plasma-manager.homeManagerModules.plasma-manager 
               ];
             };
           }
