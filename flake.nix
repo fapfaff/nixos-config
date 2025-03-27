@@ -25,11 +25,15 @@
 
           hosts/default/configuration.nix
           {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.fp = {
-              imports = [
-                hosts/default/home.nix
+            home-manager = {
+              # Shared Home-Manager config. See configuration.nix for loading user settings
+              extraSpecialArgs = { 
+                inherit inputs;
+              };
+              backupFileExtension = "bak";
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              sharedModules = [
                 inputs.catppuccin.homeManagerModules.catppuccin
               ];
             };

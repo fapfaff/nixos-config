@@ -109,14 +109,10 @@ in
     shell = pkgs.bash;
   };
 
-  home-manager = {
-    extraSpecialArgs = {
-      inherit inputs;
-    };
-    users = {
-      "fp" = import ./home.nix;
-    };
-    backupFileExtension = "bak";
+  home-manager.users.fp = {
+    imports = [
+      ./home.nix
+    ];
   };
 
   # Enable automatic login for the user.
