@@ -28,6 +28,7 @@ in
     ./../../modules/nixos/kde.nix
     ./../../modules/nixos/dev.nix # docker
     ./../../modules/nixos/themes/catppuccin.nix
+    ./../../modules/nixos/notes.nix
   ];
 
   # Nix specific
