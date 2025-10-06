@@ -111,6 +111,7 @@ in
     shell = pkgs.bash;
   };
 
+  home-manager.backupFileExtension = "bak";
   home-manager.users.fp = {
     imports = [
       ./home.nix
