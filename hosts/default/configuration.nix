@@ -24,6 +24,7 @@ in
     inputs.home-manager.nixosModules.default
     ./../../modules/nixos/boot.nix
     ./../../modules/nixos/shell.nix
+    ./../../modules/nixos/ssh.nix
     # ./../../modules/nixos/gnome.nix
     ./../../modules/nixos/kde.nix
     ./../../modules/nixos/dev.nix # docker
