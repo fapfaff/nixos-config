@@ -40,8 +40,8 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               sharedModules = [
-                inputs.catppuccin.homeManagerModules.catppuccin
-                inputs.plasma-manager.homeManagerModules.plasma-manager 
+                inputs.catppuccin.homeModules.catppuccin
+                inputs.plasma-manager.homeModules.plasma-manager 
               ];
             };
           }
