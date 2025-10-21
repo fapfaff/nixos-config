@@ -10,7 +10,7 @@
   ...
 }:
 let
-  hardwareConfigPath = /etc/nixos/hardware-configuration.nix;
+  hardwareConfigPath = ./hardware-configuration.nix;
   hasHardwareConfig = builtins.pathExists hardwareConfigPath;
 
   _ = builtins.trace "Warning: hardware-config not found at ${hardwareConfigPath}" (
