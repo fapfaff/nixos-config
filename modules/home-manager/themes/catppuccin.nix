@@ -14,22 +14,24 @@ in
   catppuccin.enable = true;
   catppuccin.accent = "blue";
 
-  catppuccin.pointerCursor = {
+  catppuccin.cursors = {
     enable = true;
     accent = "light";
   };
 
-  programs.starship.catppuccin.enable = true;
+  catppuccin.starship.enable = true;
 
   programs.vscode = {
-    extensions = with pkgs.vscode-extensions; [
-      catppuccin.catppuccin-vsc
-      catppuccin.catppuccin-vsc-icons
-    ];
+    profiles.default = {
+      extensions = with pkgs.vscode-extensions; [
+        catppuccin.catppuccin-vsc
+        catppuccin.catppuccin-vsc-icons
+      ];
 
-    userSettings = {
-      workbench.colorTheme = "Catppuccin Mocha";
-      workbench.iconTheme = "catppuccin-mocha";
+      userSettings = {
+        workbench.colorTheme = "Catppuccin Mocha";
+        workbench.iconTheme = "catppuccin-mocha";
+      };
     };
   };
 

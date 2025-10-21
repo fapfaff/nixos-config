@@ -12,7 +12,7 @@
     userEmail = "fabian-pfaff@outlook.de";
   };
 
-  programs.vscode.extensions = with pkgs.vscode-extensions; [
+  programs.vscode.profiles.default.extensions = with pkgs.vscode-extensions; [
     waderyan.gitblame
     donjayamanne.githistory
     codezombiech.gitignore

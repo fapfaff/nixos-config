@@ -2,5 +2,5 @@
 
 {
   catppuccin.enable = true;
-  boot.loader.grub.catppuccin.enable = false;
+  catppuccin.grub.enable = false;
 }

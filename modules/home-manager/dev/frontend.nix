@@ -8,7 +8,7 @@
     pnpm
   ];
 
-  programs.vscode.extensions = with pkgs.vscode-extensions; [
+  programs.vscode.profiles.default.extensions = with pkgs.vscode-extensions; [
     # HTML
     formulahendry.auto-close-tag
     formulahendry.auto-rename-tag
