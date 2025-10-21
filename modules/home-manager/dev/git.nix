@@ -8,8 +8,13 @@
 
   programs.git = {
     enable = true;
-    userName = "Fabian Pfaff";
-    userEmail = "fabian-pfaff@outlook.de";
+
+    settings = {
+      user = {
+        name = "Fabian Pfaff";
+        email = "fabian-pfaff@outlook.de";
+      };
+    };
   };
 
   programs.vscode.profiles.default.extensions = with pkgs.vscode-extensions; [
