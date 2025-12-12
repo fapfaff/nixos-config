@@ -71,9 +71,24 @@ in
 
   # Configure keymap in X11
   services.xserver.xkb = {
-    layout = "us";
-    variant = "";
+    layout = "eu,de";
+    variant = ",";
+    options = "grp:win_space_toggle";
   };
+
+  # Required for VN Telex
+  i18n.inputMethod = {
+    enable = true;
+    type = "fcitx5";
+    fcitx5.waylandFrontend = true;
+    fcitx5.addons = with pkgs; [
+      kdePackages.fcitx5-qt
+      # fcitx5-gtk
+      fcitx5-configtool
+      fcitx5-unikey
+    ];
+  };
+  # systemd.user.units."app-org.fcitx.Fcitx5@autostart.service".enable = false;
 
   # Enable CUPS to print documents.
   services.printing.enable = true;

@@ -30,5 +30,13 @@
         tapToClick = true;
       }
     ];
+
+    # Start fcitx, Required for vietnamese telex. See configuration.nix for more information.
+    configFile."kwinrc".Wayland = {
+      "InputMethod" = {
+        shellExpand = true;
+        value = "/run/current-system/sw/share/applications/fcitx5-wayland-launcher.desktop";
+      };
+    };
   };
 }
