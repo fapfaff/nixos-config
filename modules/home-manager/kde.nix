@@ -31,6 +31,11 @@
       }
     ];
 
+    # Avoid overriding gtk settings every time plasma starts, which results in conflicts.
+    configFile.kded5rc = {
+      "Module-gtkconfig"."autoload" = false;
+    };
+
     # Start fcitx, Required for vietnamese telex. See configuration.nix for more information.
     configFile."kwinrc".Wayland = {
       "InputMethod" = {
