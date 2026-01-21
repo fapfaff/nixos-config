@@ -157,6 +157,9 @@ in
   programs.firefox.enable = true;
   programs.git.enable = true;
 
+  # Enable nix-ld for running Linux binaries
+  programs.nix-ld.enable = true;
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
