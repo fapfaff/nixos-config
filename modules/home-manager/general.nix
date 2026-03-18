@@ -19,6 +19,7 @@
     commandLineArgs = [
       "--ozone-platform=wayland"
       "--enable-features=TouchpadOverscrollHistoryNavigation"
+      "--disable-features=GlobalShortcutsPortal"
     ];
 
   };
