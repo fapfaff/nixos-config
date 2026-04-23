@@ -15,9 +15,5 @@
     # Virtualisation
     ms-azuretools.vscode-docker
     ms-vscode-remote.remote-containers
-
-    # Github Copilot
-    github.copilot
-    github.copilot-chat
   ];
 }

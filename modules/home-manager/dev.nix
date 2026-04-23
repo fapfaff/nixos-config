@@ -13,10 +13,6 @@
     ./dev/frontend.nix
   ];
 
-  home.packages = with pkgs; [
-    (jetbrains.plugins.addPlugins jetbrains.idea-ultimate [ "github-copilot" ])
-  ];
-
   programs.vscode = {
     enable = true;
     mutableExtensionsDir = true;
