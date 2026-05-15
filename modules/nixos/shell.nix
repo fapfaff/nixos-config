@@ -10,5 +10,6 @@
     fastfetch
     btop
     starship
+    psmisc # fuser
   ];
 }
