@@ -53,7 +53,7 @@ in
             "us+altgr-intl"
           ])
         ];
-        xkb-options = [ "terminate:ctrl_alt_bksp" ];
+        xkb-options = [ "grp:win_space_toggle" "terminate:ctrl_alt_bksp" ];
       };
 
       "org/gnome/shell/keybindings" = {
