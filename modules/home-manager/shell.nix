@@ -5,6 +5,7 @@
     eza
     fzf
     grc
+    ripgrep
 
     fishPlugins.grc
     fishPlugins.fzf-fish
