@@ -84,8 +84,8 @@ in
     fcitx5.addons = with pkgs; [
       kdePackages.fcitx5-qt
       # fcitx5-gtk
-      fcitx5-configtool
-      fcitx5-unikey
+      qt6Packages.fcitx5-configtool
+      qt6Packages.fcitx5-unikey
     ];
   };
   # systemd.user.units."app-org.fcitx.Fcitx5@autostart.service".enable = false;
