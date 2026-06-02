@@ -23,5 +23,7 @@
   environment.systemPackages = with pkgs; [
     nixfmt-rfc-style
     glib
+    socat
+    bubblewrap
   ];
 }
