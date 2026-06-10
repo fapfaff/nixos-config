@@ -30,6 +30,7 @@ in
     ./../../modules/nixos/dev.nix # docker
     ./../../modules/nixos/themes/catppuccin.nix
     ./../../modules/nixos/notes.nix
+    ./../../modules/nixos/playwright.nix
   ];
 
   # Nix specific
