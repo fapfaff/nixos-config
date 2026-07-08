@@ -16,10 +16,12 @@
     };
 
     catppuccin.url = "github:catppuccin/nix";
+
+    llm-agents-nix.url = "github:numtide/llm-agents.nix";
   };
 
   outputs =
-    { self, nixpkgs, ... }@inputs:
+    { self, nixpkgs, llm-agents-nix, ... }@inputs:
     {
       nixosConfigurations.default = nixpkgs.lib.nixosSystem {
         specialArgs = {
