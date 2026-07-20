@@ -15,5 +15,8 @@
     # Virtualisation
     ms-azuretools.vscode-docker
     ms-vscode-remote.remote-containers
+
+    # Other
+    tomoki1207.pdf
   ];
 }
