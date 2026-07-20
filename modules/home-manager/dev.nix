@@ -11,6 +11,7 @@
     ./dev/git.nix
     ./dev/python.nix
     ./dev/frontend.nix
+    ./dev/java.nix
   ];
 
   programs.vscode = {
