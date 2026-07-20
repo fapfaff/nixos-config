@@ -4,7 +4,14 @@
 
   home.packages = with pkgs; [
     python3
-    uv
+  ];
+
+  programs.uv = {
+    enable = true;
+  };
+
+  home.sessionPath = [
+    "$HOME/.local/bin"
   ];
 
   programs.vscode.profiles.default.extensions = with pkgs.vscode-extensions; [
