@@ -28,6 +28,7 @@
     useRoutingFeatures = "client";
     extraUpFlags = [
       "--accept-routes"
+      "--operator=fp"
     ];
   };
 
@@ -73,10 +74,10 @@
 
       if [ -n "$AUTH_KEY_FILE" ]; then
         echo "Authenticating Tailscale using auth key file: $AUTH_KEY_FILE"
-        ${pkgs.tailscale}/bin/tailscale up --authkey="file:$AUTH_KEY_FILE" --accept-routes
+        ${pkgs.tailscale}/bin/tailscale up --authkey="file:$AUTH_KEY_FILE" --accept-routes --operator=fp
       else
         echo "Bringing Tailscale up..."
-        ${pkgs.tailscale}/bin/tailscale up --accept-routes
+        ${pkgs.tailscale}/bin/tailscale up --accept-routes --operator=fp
       fi
     '';
   };
