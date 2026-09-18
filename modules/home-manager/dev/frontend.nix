@@ -1,11 +1,11 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
 
   home.packages = with pkgs; [
     nodejs
+    (lib.hiPrio corepack)
     deno
-    pnpm
   ];
 
   programs.vscode.profiles.default.extensions = with pkgs.vscode-extensions; [
