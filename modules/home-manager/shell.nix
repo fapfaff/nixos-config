@@ -48,6 +48,12 @@
     enableZshIntegration = true;
   };
 
+  programs.direnv = {
+    enable = true;
+    enableZshIntegration = true;
+    nix-direnv.enable = true;
+  };
+
   programs.neovim = {
     enable = true;
     defaultEditor = true;
